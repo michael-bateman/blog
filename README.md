@@ -17,5 +17,9 @@ Please note, if you are writing something it *must* follow these conditions:
 * Sent in a `.txt`, plain text format
 * Has meaning or value
 
+## Feautures
+* Bootstrap 4
+* Fun and intresting read
+
 ## Issues
 If you find any issues, please let me know in the [issue tracker](https://github.com/michael-bateman/blog/issues) or send me an email.
