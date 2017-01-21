@@ -11,7 +11,7 @@ If you have a suggested topic that I should write on, please send me an email to
 ### Publication
 If you would like to write a post, please write the post and email it to me at [info@michaelbateman.ca](mailto:info@michaelbateman.ca) in "plain text" as a `.txt` file.
 
-Please note, if you are writing something it **must** follow these conditions:
+Please note, if you are writing something it *must* follow these conditions:
 * Contains a real topic
 * Minimal or no spelling errors
 * Sent in a `.txt`, plain text format
