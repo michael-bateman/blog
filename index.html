@@ -1,86 +1,54 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title>Michael's Blog</title>
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <link href="css/blog.css" rel="stylesheet">
-    <script src="js/bootstrap.js"></script>
-  </head>
-  <body>
-    <div class="blog-masthead">
-      <div class="container">
-        <nav class="nav blog-nav">
-          <a class="nav-link active" href="index.html">Home</a>
-          <a class="nav-link" href="about.html">About</a>
-        </nav>
-      </div>
-    </div>
-    <div class="blog-header">
-      <div class="container">
-        <h1 class="blog-title">Michael's Blog</h1>
-      </div>
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-8 blog-main">
-          <!--Sample post
-          <div class="blog-post">
-            <a name=""></a>
-            <h2 class="blog-post-title">Sample blog post</h2>
-            <p class="blog-post-meta">January 1, 2014 by <a href="about.html#michaelbateman">Michael Bateman</a></p>
-            <p>content...</p>
-          </div>
-          <hr />
-          -->
-          <div class="blog-post">
-            <a name="boring-saturday"></a>
-            <h2 class="blog-post-title">Boring Saturday</h2>
-            <p class="blog-post-meta">January 21, 2017 by <a href="about.html#michaelbateman">Michael Bateman</a></p>
-            <p>So I don't have much to do today, besides working on my website and yeah.  I'm planning to make a new release for my website which will include a little new content and yeah.</p>
-            <p>Rowing was fun this morning, we did a technical workout, but yeah, it was fun I guess.  In a couple of weeks we go to Tennessee!  Yay!</p>
-          </div>
-          <hr />
-          <div class="blog-post">
-            <a name="first-post"></a>
-            <h2 class="blog-post-title">First Post</h2>
-            <p class="blog-post-meta">January 20, 2017 by <a href="about.html#michaelbateman">Michael Bateman</a></p>
-            <p>I thought I would make my first post interesting...</p>
-            <h3>45th Presidential Inauguration</h3>
-            <p>Today at my school (Upper Canada College) we watched stunned, as President Donald Trump was sworn into office today.  This was a big landmark in history because after all, the United States is one of the most, if not the most powerful country in the world.  Many of us thought prior to the election that it would be impossible for President Trump to win the election, but we were all wrong.  A couple days and in fact going into the election, Hillary Clinton was winning according to Cable News Network (CNN).  A lot of people, including myself thought that it would be a clear decisive victory for the Democrats and Hillary would be in office, however I was wrong.</p>
-            <p>The election in the United States was very important to me since I have cousins who live in the US.  Also, with President Trump in office, he has said that he has plans to modify the North American Free Trade Agreement, or to totally remove it, which would be horrible for the Canadian economy.</p>
-            <p>Although I do not agree with all of President Trump's ideas, I do believe that he needs to be given a chance in the oval office.</p>
-          </div>
+---
+title: Michael's Blog
+layout: default
+---
+
+<div class="container">
+  <div class="blog-header">
+    <h1 class="blog-title">Michael's Blog</h1>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-8 blog-main">
+      {% for post in site.posts %}
+        <div class="blog-post">
+          <a name=""></a>
+          <h2 class="blog-post-title">{{ post.title }}</h2>
+          <p class="blog-post-meta">{{ post.date | date: '%B %d, %Y' }} by <a href="{{ site.baseurl }}/about.html#michaelbateman">Michael Bateman</a>
+          <p>{{ post.content }}</p>
         </div>
-        <div class="col-sm-3 offset-sm-1 blog-sidebar">
-          <div class="sidebar-module sidebar-module-inset">
-            <h4>About</h4>
-            <p>Blogging and ranting directly from Michael.</p>
-          </div>
-          <hr />
-          <div class="sidebar-module sidebar-module-inset">
-            <h4>Other Blogs</h4>
-            <p>Tech Blog - <a href="http://tech.michaelbateman.ca">tech.michaelbateman.ca</a></p>
-          </div>
-          <div class="sidebar-module">
-            <h4>Elsewhere</h4>
+        <hr />
+      {% endfor %}
+    </div>
+    <div class="col-sm-3 offset-sm-1 blog-sidebar">
+      <div class="sidebar-module sidebar-module-inset">
+        <h4>About</h4>
+        <p>Blogging and ranting directly from Michael.</p>
+      </div>
+      <br />
+      <div class="sidebar-module sidebar-module-inset">
+        {% for item in site.data.social-media %}
+          <h4>Social</h4>
             <ol class="list-unstyled">
-              <li><a href="https://github.com/michael-bateman">GitHub</a></li>
-              <li><a href="https://www.facebook.com/michaelbateman888">Facebook</a></li>
-              <li><a href="https://instagram.com/michaelbateman_">Instagram</a></li>
+              <li><a href="https://github.com/{{ item[1].github }}">GitHub</a></li>
+              <li><a href="https://www.facebook.com/{{ item[1].facebook }}">Facebook</a></li>
+              <li><a href="https://instagram.com/{{ item[1].instagram }}">Instagram</a></li>
+              <br />
+              <li>
+                <a class="btn btn-primary" href="https://michaelbateman.ca" role="button">
+                  More &raquo;
+                </a>
+              </li>
             </ol>
-          </div>
-        </div>
+        {% endfor %}
       </div>
+      <br />
+      <div class="sidebar-module sidebar-module-inset">
+        <h4>Other Blogs</h4>
+        <p>Tech Blog - <a href="http://tech.michaelbateman.ca">tech.michaelbateman.ca</a></p>
+      </div>
+    <br />
     </div>
-    <footer class="blog-footer">
-      <p>This blog utilizes the Bootstrap Framework</p>
-      <p>
-        <a href="#">Back to top</a>
-      </p>
-    </footer>
-  </body>
-</html>
+  </div>
+</div>
