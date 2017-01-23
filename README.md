@@ -1,5 +1,6 @@
-# Blog
-[blog.michaelbateman.ca](https://blog.michaelbateman.ca)
+# Blog | [blog.michaelbateman.ca](https://blog.michaelbateman.ca)
+[![Build Status](https://travis-ci.org/michael-bateman/blog.svg?branch=master)](https://travis-ci.org/michael-bateman/blog)
+
 
 ## About
 This is my blog where I write about a lot of stuff from technology to world news.
