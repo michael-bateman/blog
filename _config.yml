@@ -1,7 +1,7 @@
 # Site settings
 title: Michael's Blog
 email: info@michaelbateman.ca
-description: > # The UCC Engineering Society
+description: > # Michael's personal
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://blog.michaelbateman.ca" # the base hostname & protocol for your site
 
