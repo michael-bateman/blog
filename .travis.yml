@@ -5,3 +5,7 @@ rvm:
 script: "bundle exec jekyll build"
 
 sudo: false
+
+ignore:
+  - _site/feed.xml
+  - _site/feed.xslt.xml
