@@ -1,4 +1,5 @@
 ---
+layout: post
 title: Boring Saturday
 date: 2017-01-21
 ---
