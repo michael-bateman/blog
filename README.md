@@ -1,5 +1,5 @@
 # Blog | [blog.michaelbateman.ca](https://blog.michaelbateman.ca)
-[![Build Status](https://travis-ci.org/michael-bateman/blog.svg?branch=master)](https://travis-ci.org/michael-bateman/blog)
+[![Build Status](https://travis-ci.org/michael-bateman/blog.michaelbateman.ca.svg?branch=master)](https://travis-ci.org/michael-bateman/blog.michaelbateman.ca)
 
 
 ## About
