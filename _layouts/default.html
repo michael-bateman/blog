@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 
+	{% include notice.html %}
+
 	{% include head.html %}
 
   <body>
+
+  	{% include detect.html %}
 
   	{% include nav.html %}
 
 			{{ content }}
 
-		{% include footer.html %}
+	{% include footer.html %}
 
   </body>
 
